@@ -17,13 +17,10 @@ class Solution {
     
     static void paths(Node root, int sum, int curr, ArrayList<ArrayList<Integer>> result,ArrayList<Integer> temp ){
         if(root==null) return;
-        // ArrayList<Integer> temp = new ArrayList<>();
         curr+=root.data;
         temp.add(root.data);
         if(curr==sum) result.add(new ArrayList<>(temp));
-        // System.out.println(temp);
-        // System.out.println(curr);
-        
+
         paths(root.left,sum,curr,result,temp);
         paths(root.right,sum,curr,result,temp);
         temp.remove(temp.size()-1);
