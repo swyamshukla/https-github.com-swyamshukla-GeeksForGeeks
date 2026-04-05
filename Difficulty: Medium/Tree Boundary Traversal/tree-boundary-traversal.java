@@ -1,14 +1,3 @@
-/*
-class Node {
-    int data;
-    Node left, right;
-
-    public Node(int d) {
-        data = d;
-        left = right = null;
-    }
-}
-*/
 
 class Solution {
     
@@ -18,7 +7,7 @@ class Solution {
             // System.out.println("hello"+root.data);
             return;
         }
-           result.add(root.data);
+         result.add(root.data);
 
 
         if(root.left!=null){
@@ -66,6 +55,7 @@ class Solution {
             return result;
         }
         // Stack<Node> stack = new Stack<>();
+        
         result.add(root.data);
         addLeftTree(root.left,result);
         addLeaf(root,result);
